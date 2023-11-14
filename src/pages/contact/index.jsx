@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { useState, useRef, Suspense } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "sonner";
@@ -13,7 +14,7 @@ const Contact = () => {
   const formRef = useRef(null);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
 
-  const { alert, hideAlert, showAlert } = useAlert();
+  const { alert } = useAlert();
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -57,7 +58,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="max-container relative flex flex-col lg:flex-row h-screen">
+    <section className="max-container relative flex flex-col lg:flex-row">
       {alert.show && <Alert {...alert} />}
       <div className="min-w-1/2 flex flex-1 flex-col">
         <h1 className="head-text">Get in touch</h1>

@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 
 function App() {
   return (
-    <main className="bg-slate-300/20">
+    <main className="min-h-screen bg-slate-300/20">
       <BrowserRouter>
         <Navbar />
         <Toaster />
